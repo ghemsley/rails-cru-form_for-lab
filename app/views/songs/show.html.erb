@@ -1,0 +1,4 @@
+<h1><%= @song.name %></h1>
+<%= link_to @song.artist.name, artist_path(Artist.find_by_id(@song.artist_id)) %>
+<%= link_to @song.genre.name, genre_path(Genre.find_by_id(@song.genre_id)) %>
+<%= link_to 'Index', songs_path %>
